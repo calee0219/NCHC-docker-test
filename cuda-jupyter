@@ -1,0 +1,12 @@
+FROM nvidia/cuda
+
+MAINTAINER calee sz110010@gmail.com
+
+RUN apt-get update
+RUN apt-get install -y python python-pip python3 python3-pip vim
+RUN pip install --upgrade pip
+RUN pip3 install --upgrade pip
+RUN pip install jupyter
+RUN pip install numpy scipy tensorflow tensorflow-gpu
+
+#CMD cd /jupyter/storage && jupyter notebook --config=/jupyter/config --allow-root
